@@ -1,0 +1,90 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbar__toggleBtn {
+  position: absolute;
+  left: 35px;
+  font-size: 25px;
+  color: #ffffff;
+  display: none;
+}
+
+.navbar {
+  background-color: #24292d;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+  font-size: 22px;
+}
+
+.navbar__logo {
+  padding: 8px 12px;
+  font-size: 37px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu a:hover {
+  color: #bdcad5;
+}
+
+.navbar__personal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__personal li {
+  padding: 8px 12px;
+}
+
+.navbar__personal__profile {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggleBtn {
+    display: block;
+    top: 30px;
+  }
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar__search {
+    display: none;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    padding: 0;
+    display: none;
+  }
+
+  .navbar__personal {
+    display: none;
+  }
+
+  .navbar__search.active,
+  .navbar__menu.active,
+  .navbar__personal.active {
+    display: flex;
+  }
+}
